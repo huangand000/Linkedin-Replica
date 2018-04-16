@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    @model belt_retake.Models.User
+    <h1>Register</h1>
+    <form asp-controller="Home" asp-action="Register" method="post">
+        <table>
+            <tr>
+                <td><label asp-for="Name"></label></td>
+                <td><input asp-for="Name"/> <span asp-validation-for="Name"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Email"></label></td>
+                <td><input asp-for="Email"/> <span asp-validation-for="Email"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Password"></label></td>
+                <td><input asp-for="Password"/> <span asp-validation-for="Password"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="PasswordConfirm"></label></td>
+                <td><input asp-for="PasswordConfirm"/> <span asp-validation-for="PasswordConfirm"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for='Description'></label></td>
+                <td><input asp-for='Description'> <span asp-validation-for="Description"></span></td>
+            </tr>
+        </table>
+        <input type='submit' value='Register'>
+    </form>
+
+
+    <h1>Login</h1>
+    <form action='login' method='post'>
+        @if (@ViewBag.Errors != null) {
+            <p>@ViewBag.Errors</p>
+        }
+        <table>
+            <tr>
+                <td>Email:</td>
+                <td><input type='text' name='email'></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type='password' name='password'></td>
+            </tr>
+        </table>
+        <input type='submit' value='Login'>
+    </form>
+</body>
+</html>

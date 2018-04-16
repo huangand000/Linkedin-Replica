@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hi @ViewBag.name</h2>
+    <a href='/logout'>Log out</a>
+    <a href='/users'>All Users</a>
+
+    <h2>Here is your profile description:</h2>
+    <textarea>@ViewBag.description</textarea>
+
+    <h2>Your Professional Network:</h2>
+    @foreach(var user in @ViewBag.allNetwork) {
+        if(@user["myName"] == @ViewBag.name) {
+            <p>
+                <a href='/users/@user["friendId"]'>@user["friendName"]</a>
+                <form action='/deleteNetwork' method='post'>
+                    <input type='hidden' name='id' value=@user["NetworkId"]>
+                    <input type='submit' value='Delete'>
+                </form>
+            </p>
+        } else {
+            <p>
+                <a href='/users/@user["myId"]'>@user["myName"]</a>
+                <form action='/deleteNetwork' method='post'>
+                    <input type='hidden' name='id' value=@user["NetworkId"]>
+                    <input type='submit' value='Ignore'>
+                </form>
+            </p>
+        }
+    }
+
+    <h2>Invitations:</h2>
+    <p>The following people asked you to be their network:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var user in @ViewBag.allInvitations) {
+            <tr>
+                <td>
+                    @user["myName"]
+                </td>
+                <td>
+                    <form style='display:inline-block' action='/accept' method='post'>
+                        <input type='hidden' name='id' value=@user["myId"]>
+                        <input type='hidden' name='invitationId' value=@user["InvitationId"]>
+                        <input type='submit' value='Accept Invite'>
+                    </form>
+                    <form style='display:inline-block' action='/ignore' method='post'>
+                        <input type='hidden' name='id' value=@user["InvitationId"]>
+                        <input type='submit' value='Ignore'>
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

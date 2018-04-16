@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href='/logout'>Log out</a>
+    <a href='/myProfile'>My Profile</a>
+    <h2>Users you may want to connect with:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var user in @ViewBag.displayUsers) {
+            <tr>
+                <td><a href='/users/@user["user_id"]'>@user["name"]</a></td>
+                <td>
+                <form action='connectUser' method='post'>
+                    <input type='submit' value='Connect'>
+                    <input type='hidden' name='id' value=@user["user_id"]>
+                </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    
+</body>
+</html>

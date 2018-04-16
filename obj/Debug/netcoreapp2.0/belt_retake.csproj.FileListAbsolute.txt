@@ -1,0 +1,10 @@
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/bin/Debug/netcoreapp2.0/belt_retake.deps.json
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/bin/Debug/netcoreapp2.0/belt_retake.runtimeconfig.json
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/bin/Debug/netcoreapp2.0/belt_retake.runtimeconfig.dev.json
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/bin/Debug/netcoreapp2.0/belt_retake.dll
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/bin/Debug/netcoreapp2.0/belt_retake.pdb
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/obj/Debug/netcoreapp2.0/belt_retake.csproj.CoreCompileInputs.cache
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/obj/Debug/netcoreapp2.0/belt_retake.AssemblyInfoInputs.cache
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/obj/Debug/netcoreapp2.0/belt_retake.AssemblyInfo.cs
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/obj/Debug/netcoreapp2.0/belt_retake.dll
+/Users/andrehuang/Desktop/Coding_Dojo/DojoAssignments/C#/Belt_Prep/belt_retake/obj/Debug/netcoreapp2.0/belt_retake.pdb
